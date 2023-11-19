@@ -1,8 +1,8 @@
 package com.stepdefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import com.actions.BillingActions;
 import com.actions.FrontOfficeAction;
@@ -28,6 +28,7 @@ public class AdminLoginStepDefinition  {
 		
 	}
 	public String url = "https://demo.smart-hospital.in/site/login";
+	public String verify;
 
 	@Given("user enters into the Admin portal")
 	public void user_enters_into_the_admin_portal() {
@@ -116,13 +117,20 @@ public class AdminLoginStepDefinition  {
 	}
 
 	@Given("Added the In patient details")
-	public void added_the_in_patient_details() {
+	public void added_the_in_patient_details() throws InterruptedException {
 		System.out.println("11");
-		InAct.AddInPatientDetails();
+		verify = InAct.AddInPatientDetails();
+		
+		this.verify = verify;
 	}
 
 	@Then("Check the In patient added")
 	public void check_the_in_patient_added() {
 		System.out.println("12");
+//		Assert.assertTrue(logact.getVerifyText().contains("Dashboard"));
+		System.out.println(verify);
+		System.out.println(InAct.checkAssert());
+		InAct.sendNameToCheck(verify);
+		Assert.assertTrue(InAct.checkAssert().contains(verify));
 	}
 }

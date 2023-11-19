@@ -16,7 +16,7 @@ public class InPatientActions {
 	public void userEntersIp() {
 		inPat.ClickInPatient.click();
 	}
-	public void AddInPatientDetails() {
+	public String AddInPatientDetails() throws InterruptedException {
 		inPat.addpatient.click();
 		inPat.newPatient.click();
 		inPat.patientName.sendKeys("Deepak");
@@ -26,18 +26,26 @@ public class InPatientActions {
 		inPat.savePatient.click();
 		inPat.admissionDate.sendKeys(Keys.ENTER);
 		inPat.consultantDoctor.click();
+		Thread.sleep(3000);
 		inPat.consultantDoctorDropDown.click();
+		Thread.sleep(3000);
 		Select s = new Select(inPat.betGroup);
 		s.selectByIndex(1);
+		Thread.sleep(3000);
 		inPat.betNumber.click();
+		Thread.sleep(3000);
 		inPat.betNumberDropDown.click();
+		String name = inPat.getname.getText();
 		inPat.save.click();
 		
+		return name;
 		
-		
-		
-		
-		
+	}
+	public String checkAssert() {
+		return inPat.checkingName.getText();
+	}
+	public void sendNameToCheck(String sendNameToCheck1) {
+		inPat.searchFieldToCheck.sendKeys(sendNameToCheck1);
 	}
 
 }

@@ -28,10 +28,16 @@ public class InPatientLocators {
 	public WebElement consultantDoctorDropDown;
 	@FindBy(xpath = "//select[@name='bed_group_id']")
 	public WebElement betGroup;
-	@FindBy(xpath = "(//span[@title='Select'])[3]")
+	@FindBy(xpath = "(//span[@title='Select'])[2]")
 	public WebElement betNumber;
 	@FindBy(xpath = "(//li[@role='treeitem'])[2]")
 	public WebElement betNumberDropDown;
+	@FindBy(xpath = "//li[@class='singlelist24bold']//span[1]")
+	public WebElement getname;
 	@FindBy(xpath = "(//div[@class='pull-right']//button)[3]")
 	public WebElement save;
+	@FindBy(xpath = "(//tr[@class='odd']//td)[3]")
+	public WebElement checkingName;
+	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']//input[1]")
+	public WebElement searchFieldToCheck;
 }
