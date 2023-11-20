@@ -16,7 +16,7 @@ public class InPatientActions {
 	public void userEntersIp() {
 		inPat.ClickInPatient.click();
 	}
-	public String AddInPatientDetails() throws InterruptedException {
+	public void AddInPatientDetails() throws InterruptedException {
 		inPat.addpatient.click();
 		inPat.newPatient.click();
 		inPat.patientName.sendKeys("Deepak");
@@ -38,7 +38,7 @@ public class InPatientActions {
 		String name = inPat.getname.getText();
 		inPat.save.click();
 		
-		return name;
+		
 		
 	}
 	public String checkAssert() {
@@ -46,6 +46,9 @@ public class InPatientActions {
 	}
 	public void sendNameToCheck(String sendNameToCheck1) {
 		inPat.searchFieldToCheck.sendKeys(sendNameToCheck1);
+	}
+	public String getUrl() {
+		return HelperClass.driver.getCurrentUrl();
 	}
 
 }

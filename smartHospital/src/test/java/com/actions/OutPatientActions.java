@@ -3,7 +3,6 @@ package com.actions;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
-import com.locators.FrontOfficeLocators;
 import com.locators.OutPatientLocators;
 import com.utility.HelperClass;
 
