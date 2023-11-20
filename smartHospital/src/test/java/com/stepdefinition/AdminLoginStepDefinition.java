@@ -13,6 +13,7 @@ import com.utility.HelperClass;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class AdminLoginStepDefinition  {
 	BillingLocators bill;
@@ -41,30 +42,90 @@ public class AdminLoginStepDefinition  {
 		
 		
 	}
-
-	@Given("user enters into opd")
-	public void user_enters_into_opd() throws InterruptedException {
-		System.out.println("1");
-		billaction.ClickBillingButton();
-		System.out.println("clicked billing");
-		
-		
+	
+	@Given("user enters into Billing")
+	public void user_enters_into_billing() {
+		billaction.clickBilling();	    
 	}
 
-	@Given("Added the patient details")
-	public void added_the_patient_details() throws InterruptedException {
-		System.out.println("2");
-		billaction.consultant_Doctor();
+	@When("user clicks the opd")
+	public void user_clicks_the_opd() throws InterruptedException {
+	    billaction.clickOPD();
 	}
 
-	@Then("Check the patient added")
-	public void check_the_patient_added() {
-		System.out.println("3");
-//		billaction.Billing_final();
-		
-		Assert.assertNotSame(billaction.getUrl(), url);
-		System.out.println("Asserted Billing Action");
+	@When("clicks the Add patient")
+	public void clicks_the_add_patient() {
+	    billaction.AddPatient();
 	}
+
+	@When("clicks the new patient")
+	public void clicks_the_new_patient() {
+	    billaction.NewPatient();
+	}
+
+	@When("enter the Mandatory fields only")
+	public void enter_the_mandatory_fields_only() throws InterruptedException {
+	    billaction.mandatoryField();
+	}
+	@When("Missing Mandatory fields only")
+	public void missing_mandatory_fields_only() throws InterruptedException {
+	   billaction.mandatoryField();
+	   billaction.missMandatoryField();
+	}
+
+
+	@Then("enters the other OPD details")
+	public void enters_the_other_opd_details() throws InterruptedException {
+	    billaction.otherOPDdetails();
+	}
+
+	@Then("checks the name")
+	public void checks_the_name() {
+	    billaction.getUrl();
+	    Assert.assertNotSame(billaction.getUrl(), url);
+	}
+	
+	@When("enter some fields")
+	public void enter_some_fields() {
+		billaction.SomeFeilds();
+	    
+	}
+
+	@Then("Assert the error")
+	public void assert_the_error() throws InterruptedException {
+	    Assert.assertTrue(billaction.getErrorMessage().contains("The Age field is required."));
+	    System.out.println("Assertion passed");
+	}
+	
+	@Then("Assert the successfull message")
+	public void assert_the_successfull_message() throws InterruptedException {
+		Assert.assertTrue(billaction.checkingSavedOrNot().contains("Record Saved Successfully"));
+		System.out.println("Assertion passed in new patient");
+	}
+	
+	@Then("Assert the intentional error")
+	public void assert_the_intentional_error() throws InterruptedException {
+		Assert.assertTrue(billaction.getPaidErrorMessage().contains("The Paid Amount field is required."));
+	    System.out.println("Assertion passed for Intentionally failed full bill module");
+	}
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@Given("user enter into the FrontOffice")
 	public void user_enter_into_the_front_office() {

@@ -23,6 +23,4 @@ Feature: Checking the billing feature
 
   @IPD-InPatient
   Scenario: Adding patient and checking from patient list
-    Given user enter into the IPD-InPatient
-    And Added the In patient details
-    Then Check the In patient added
+   

@@ -24,8 +24,12 @@ public class BillingLocators {
 	public WebElement month;
 	@FindBy(xpath = "//input[@id='age_month']/following-sibling::input[1]")
 	public WebElement day;
+	@FindBy(xpath = "//p[text()='The Age field is required.']")
+	public WebElement ErrorMessage;
 	@FindBy(xpath = "//button[text()=' Save']")
 	public WebElement savePatient;
+	@FindBy(xpath = "//button[@class='toast-close-button']/following-sibling::div[1]")
+	public WebElement ChecksavePatient;
 	@FindBy(xpath = "(//label[text()='Appointment Date']/following::input)[1]")
 	public WebElement appointmentDate;
 	@FindBy(xpath = "(//span[@class='select2-selection select2-selection--single']//span)[3]")
@@ -44,10 +48,12 @@ public class BillingLocators {
 	public WebElement charge;
 	@FindBy(xpath = "//li[text()='Consultation Fees ']")
 	public WebElement chargeDropDown;
-	@FindBy(xpath = "//span[text()='Save']")
+	@FindBy(xpath = "//button[@name='save']//span[1]")
 	public WebElement SaveAndPrint;
 	@FindBy(xpath = "//input[@type='search']")
 	public WebElement SearchField;
 	@FindBy(xpath = "(//tr[@role='row']//a)[1]")
 	public WebElement AddedPatientList;
+	@FindBy(xpath = "//p[text()='The Paid Amount field is required.']")
+	public WebElement ErrorPaidMessage;
 }
