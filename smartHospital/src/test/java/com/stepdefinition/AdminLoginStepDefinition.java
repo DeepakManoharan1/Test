@@ -108,67 +108,127 @@ public class AdminLoginStepDefinition  {
 		Assert.assertTrue(billaction.getPaidErrorMessage().contains("The Paid Amount field is required."));
 	    System.out.println("Assertion passed for Intentionally failed full bill module");
 	}
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	@Given("user enter into the FrontOffice")
-	public void user_enter_into_the_front_office() {
-		System.out.println("4");
-		frontAction.enterIntoTheFrontOffice();
-		
-	}
-
-	@Given("added the visitors")
-	public void added_the_visitors() {
-		System.out.println("5");
-		frontAction.PurposeActions();
-		System.out.println("visitor added");
-		
-	}
-
-	@Then("Check the visitors added")
-	public void check_the_visitors_added() {
-		System.out.println("6");
-		Assert.assertEquals(frontAction.checkingUseradded(),"9361109224");
-		System.out.println("Asserted");
-		
-	}
 /////////////////////////////////
-	@Given("user enter into the OPD-OutPatient")
-	public void user_enter_into_the_opd_out_patient() throws InterruptedException {
-		System.out.println("7");
-		opAct.userEntersOp();
-		System.out.println("User entered into OP");
-	}
-	@Given("Added the op patient details")
-	public void added_the_op_patient_details() throws InterruptedException {
-		System.out.println("8");
-		opAct.PatientDetails();
-		System.out.println("Patient Details Added");
+	//front office
+	
+	@Given("user enters into front office")
+	public void user_enters_into_front_office() {
+	    frontAction.enterFront();
 	}
 
-	@Then("Check the op patient added")
-	public void check_the_op_patient_added() {
-		System.out.println("9");
-		Assert.assertNotSame(opAct.getUrl(), url);
-		System.out.println("Asserted Out Patient");
+	@When("clicks the Add visitors")
+	public void clicks_the_add_visitors() {
+	    frontAction.Addvisitor();
 	}
+
+	@When("enter all fields")
+	public void enter_all_fields() {
+	    frontAction.addAllFields();
+	}
+
+	@Then("save the visitors")
+	public void save_the_visitors() throws InterruptedException {
+	    frontAction.saveVisitor();
+	}
+
+	@When("misses some fields")
+	public void misses_some_fields() {
+	   frontAction.missFields();
+	}
+
+	@Then("Assert the error frontOffice")
+	public void assert_the_error_front_office() throws InterruptedException {
+		Assert.assertTrue(frontAction.assertfrontError().contains("The Purpose field is required."));
+		 System.out.println("assert passed for front office"); 
+	}
+
+	@When("clicks the Add visitors as inquiry")
+	public void clicks_the_add_visitors_as_inquiry() {
+	    frontAction.AsInquiry();
+	}
+
+	
+
+	@When("clicks the Add visitors as seminar")
+	public void clicks_the_add_visitors_as_seminar() {
+	   frontAction.AsSeminar();
+	}
+
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	////////////////////////////////////////////
+	
+	//outpatient
+	
+	@Given("user enters into OutPatient")
+	public void user_enters_into_out_patient() {
+		opAct.userEntersOp();
+	}
+
+	@When("enter some fields in OutPatient")
+	public void enter_some_fields_in_out_patient() {
+	    opAct.enter_some_fields_in_out_patient();
+	}
+
+	@Then("Assert the error in outpatient")
+	public void assert_the_error_in_outpatient() {
+		Assert.assertTrue(opAct.assert_the_error_in_outpatient().contains("The Day field is required."));
+		
+	}
+
+	@When("enter the Mandatory fields only in outPatient")
+	public void enter_the_mandatory_fields_only_in_out_patient() {
+	    opAct.enter_the_mandatory_fields_only_in_out_patient();
+	}
+
+	@Then("Assert the successfull message in OutPatient")
+	public void assert_the_successfull_message_in_out_patient() {
+		Assert.assertTrue(opAct.assert_the_successfull_message_in_out_patient().contains("Record Saved Successfully"));
+		
+	}
+
+	@Then("enters the other OPD details in outPatient")
+	public void enters_the_other_opd_details_in_out_patient() throws InterruptedException {
+	   opAct.enters_the_other_opd_details_in_out_patient(); 
+	}
+
+	@Then("checks the name in Outpatient")
+	public void checks_the_name_in_outpatient() {
+		Assert.assertTrue(opAct.checks_the_name_in_outpatient().contains("Record Saved Successfully"));
+		
+	}
+
+	@When("Missing Mandatory fields only in outPatient")
+	public void missing_mandatory_fields_only_in_out_patient() throws InterruptedException {
+	    opAct.missing_mandatory_fields_only_in_out_patient();
+	}
+
+	@Then("Assert the intentional error in OutPatient")
+	public void assert_the_intentional_error_in_out_patient() {
+		Assert.assertTrue(opAct.assert_the_intentional_error_in_out_patient().contains("The Appointment Date field is required."));
+		
+	}
+
+	
+
+	
+/////////////////////////////////
+	
 
 	@Given("user enter into the IPD-InPatient")
 	public void user_enter_into_the_ipd_in_patient() {

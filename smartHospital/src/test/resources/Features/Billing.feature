@@ -13,7 +13,7 @@ And clicks the new patient
 And enter some fields
 Then Assert the error
 
-@Mandatory 
+@MandatoryBill
 
 Scenario: checking the new patient
 Given user enters into Billing

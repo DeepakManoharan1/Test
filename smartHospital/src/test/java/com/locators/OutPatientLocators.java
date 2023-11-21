@@ -42,4 +42,16 @@ public class OutPatientLocators {
 	public WebElement paidAmount;
 	@FindBy(xpath = "//span[text()='Save']")
 	public WebElement saveAndPrint;
+	
+	//added
+	@FindBy(xpath = "//div[@class='toast-message']//p[1]")
+	public WebElement errorMsg;
+	@FindBy(xpath = "//div[@class='toast toast-success']//div[1]")
+	public WebElement SuccessMsg;
+	@FindBy(xpath = "//div[@class='toast toast-success']//div[1]")
+	public WebElement SuccessMsgFull;
+	@FindBy(xpath = "//div[@class='toast-message']//p[1]")
+	public WebElement errorMsgFull;
+	
+	
 }
