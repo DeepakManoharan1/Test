@@ -228,7 +228,68 @@ public class AdminLoginStepDefinition  {
 
 	
 /////////////////////////////////
+	///////inpatient
 	
+	@Given("user enters into InPatient")
+	public void user_enters_into_in_patient() {
+	    InAct.userEntersIp();	    
+	}
+
+	@When("enter some fields in InPatient")
+	public void enter_some_fields_in_in_patient() {
+	    
+	    InAct.enter_some_fields_in_in_patient();
+	}
+
+	@Then("Assert the error in Inpatient")
+	public void assert_the_error_in_inpatient() {
+		Assert.assertTrue(InAct.assert_the_error_in_inpatient().contains("The Name field is required."));
+		
+	    
+	}
+
+	@When("enter the Mandatory fields only in InPatient")
+	public void enter_the_mandatory_fields_only_in_in_patient() {
+	    InAct.enter_the_mandatory_fields_only_in_in_patient();
+	    
+	}
+
+	@Then("Assert the successfull message in InPatient")
+	public void assert_the_successfull_message_in_in_patient() {
+		String m=InAct.assert_the_successfull_message_in_in_patient();
+		Assert.assertTrue(m.contains("Record Saved Successfully"));
+		
+	}
+
+	@Then("enters the other OPD details in InPatient")
+	public void enters_the_other_opd_details_in_in_patient() throws InterruptedException {
+	    InAct.enters_the_other_opd_details_in_in_patient();
+	    
+	}
+
+	@Then("checks the name in Inpatient")
+	public void checks_the_name_in_inpatient() {
+		Assert.assertTrue(InAct.checks_the_name_in_inpatient().contains("Patient Added Successfully"));
+		
+	    
+	}
+
+	@When("Missing Mandatory fields only in InPatient")
+	public void missing_mandatory_fields_only_in_in_patient() throws InterruptedException {
+	    InAct.missing_mandatory_fields_only_in_in_patient();	    
+	}
+
+	@Then("Assert the intentional error in InPatient")
+	public void assert_the_intentional_error_in_in_patient() {
+		Assert.assertTrue(InAct.assert_the_intentional_error_in_in_patient().contains("The Appointment Date field is required."));
+		
+	    
+	}
+	
+	
+	
+	
+	/////////////////////////
 
 	@Given("user enter into the IPD-InPatient")
 	public void user_enter_into_the_ipd_in_patient() {

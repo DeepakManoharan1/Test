@@ -40,4 +40,17 @@ public class InPatientLocators {
 	public WebElement checkingName;
 	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']//input[1]")
 	public WebElement searchFieldToCheck;
+	
+	//added
+	@FindBy(xpath = "//div[@class='toast-message']//p[1]")
+	public WebElement errorMsg1;
+	@FindBy(xpath = "//button[@class='toast-close-button']/following-sibling::div[1]")
+	public WebElement sucessmsg1;
+	@FindBy(xpath = "//div[@class='toast toast-success']//div[1]")
+	public WebElement sucessmsg2;
+	@FindBy(xpath = "//div[@id='DataTables_Table_0_filter']//input[1]")
+	public WebElement CreditLimit;
+	@FindBy(xpath = "//div[@class='toast-message']//p[1]")
+	public WebElement errorMsg2;
+	
 }

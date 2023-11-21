@@ -14,7 +14,7 @@ public class BillingLocators {
 	public WebElement opd;
 	@FindBy(xpath = "//a[contains(@class,'btn btn-primary')]")
 	public WebElement opdAddPatient;
-	@FindBy(xpath = "//a[@id='add']//span[1]")
+	@FindBy(xpath = "//span[text()='New Patient']")
 	public WebElement NewPatient;
 	@FindBy(xpath = "((//label[text()='Name'])[2]/following::input)[1]")
 	public WebElement name;

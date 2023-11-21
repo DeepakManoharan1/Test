@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class OutPatientLocators {
 	@FindBy(xpath = "//span[text()=' OPD - Out Patient']")
 	public WebElement clickOutPatient;
-	@FindBy(xpath = "//div[@class='box-tools addmeeting']//a[1]")
+	@FindBy(xpath = "(//a[@data-toggle='modal'])[1]")
 	public WebElement addpatient;
 	@FindBy(xpath = "//div[contains(@class,'col-lg-2 col-md-2')]//a[1]")
 	public WebElement newPatient;

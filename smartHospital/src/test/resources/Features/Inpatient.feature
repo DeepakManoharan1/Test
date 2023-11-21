@@ -1,7 +1,7 @@
 Feature: Checking the Inpatient Module
 
-#Background: 
-    #Given user enters into the Admin portal
+Background: 
+    Given user enters into the Admin portal
 
 @NotEnterAllFeildInOp
 Scenario: Missing the mandatory fields intentionally in new patient for OutPatient office 
