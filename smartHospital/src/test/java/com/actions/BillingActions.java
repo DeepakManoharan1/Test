@@ -1,5 +1,6 @@
 package com.actions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -37,6 +38,13 @@ public class BillingActions {
 		bill.day.sendKeys("11");
 		bill.savePatient.click();
 		
+		
+	}
+	
+	public void logout1() {
+		HelperClass.driver.navigate().back();
+		HelperClass.driver.findElement(By.xpath("(//img[@alt='User Image'])[1]")).click();
+		HelperClass.driver.findElement(By.xpath("(//a[@data-toggle='tooltip']/following-sibling::a)[2]")).click();
 		
 	}
 	public String checkingSavedOrNot() throws InterruptedException {

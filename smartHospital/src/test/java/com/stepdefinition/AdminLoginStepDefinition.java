@@ -325,4 +325,9 @@ public class AdminLoginStepDefinition  {
 //		InAct.sendNameToCheck(verify);
 //		Assert.assertTrue(InAct.checkAssert().contains(verify));
 	}
+	@Then("Logout1")
+	public void logout1() {
+		billaction.logout1();
+		System.out.println("logout success");
+	}
 }

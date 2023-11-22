@@ -12,6 +12,7 @@ And clicks the Add patient
 And clicks the new patient
 And enter some fields
 Then Assert the error
+And Logout1 
 
 @MandatoryBill
 
@@ -22,6 +23,7 @@ And clicks the Add patient
 And clicks the new patient
 And enter the Mandatory fields only
 Then Assert the successfull message
+And Logout1
 
 @FullBilling
 Scenario: Checking the mandatory fields for the new patient details
@@ -33,6 +35,7 @@ And clicks the new patient
 And enter the Mandatory fields only
 Then enters the other OPD details
 And checks the name
+And Logout1
 
 @BillingNotMandatory
 Scenario: Intentionally failing in billig module
@@ -43,6 +46,7 @@ And clicks the Add patient
 And clicks the new patient
 And Missing Mandatory fields only
 Then Assert the intentional error
+And Logout1
 
 
 

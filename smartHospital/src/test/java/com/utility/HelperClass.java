@@ -23,6 +23,8 @@ private static HelperClass helperclass;
 		log = LogManager.getLogger(AdminLoginStepDefinition.class);
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+//		options.addArguments("--remote-allow-origins=*");
+//		options.addArguments("---headless");
 		driver = new ChromeDriver(options);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
