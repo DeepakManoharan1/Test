@@ -4,8 +4,10 @@ import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.stepdefinition.AdminLoginStepDefinition;
@@ -19,7 +21,9 @@ private static HelperClass helperclass;
 	
 	protected HelperClass(){
 		log = LogManager.getLogger(AdminLoginStepDefinition.class);
-		driver = new EdgeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+		driver = new ChromeDriver(options);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		log.info("Implicit wait applied");

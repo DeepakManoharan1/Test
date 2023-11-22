@@ -2,6 +2,7 @@ package com.actions;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.locators.InPatientLocators;
@@ -40,15 +41,19 @@ public class InPatientActions {
 		
 		inPat.admissionDate.sendKeys(Keys.ENTER);
 		inPat.consultantDoctor.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(inPat.consultantDoctorDropDown));
 		inPat.consultantDoctorDropDown.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(inPat.CreditLimit));
 		inPat.CreditLimit.sendKeys("1000");
 		Select s = new Select(inPat.betGroup);
 		s.selectByIndex(1);
 		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(inPat.betNumber));
 		inPat.betNumber.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(inPat.betNumberDropDown));
 		inPat.betNumberDropDown.click();
 		String name = inPat.getname.getText();
 		inPat.save.click();

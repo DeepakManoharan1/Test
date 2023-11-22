@@ -2,6 +2,7 @@ package com.actions;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.locators.BillingLocators;
 //import com.locators.BillingLocators;
@@ -43,22 +44,28 @@ public class BillingActions {
 	}
 	public void otherOPDdetails() throws InterruptedException {
 		bill.appointmentDate.sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.ConsultantDoctor));
 		bill.ConsultantDoctor.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.doctor));
 		bill.doctor.click();
 		bill.chargeCatogory.click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
 		bill.OPDLevelCheck.click();
 		bill.charge.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		//repeat
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeCatogory));
 		bill.chargeCatogory.click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
 		bill.OPDLevelCheck.click();
 		bill.charge.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		//repeat
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeDropDown));
 		bill.chargeDropDown.click();
 		bill.appliedCharges.sendKeys("150");
 		bill.PaidCharges.sendKeys("150");
@@ -67,22 +74,29 @@ public class BillingActions {
 	}
 	public void missMandatoryField() throws InterruptedException {
 		bill.appointmentDate.sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.ConsultantDoctor));
 		bill.ConsultantDoctor.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.doctor));
 		bill.doctor.click();
 		bill.chargeCatogory.click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
 		bill.OPDLevelCheck.click();
 		bill.charge.click();
-		Thread.sleep(3000);
+		
+//		Thread.sleep(3000);
 		//repeat
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeCatogory));
 		bill.chargeCatogory.click();
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
 		bill.OPDLevelCheck.click();
 		bill.charge.click();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		//repeat
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeDropDown));
 		bill.chargeDropDown.click();
 		bill.appliedCharges.sendKeys("150");
 		bill.SaveAndPrint.click();
