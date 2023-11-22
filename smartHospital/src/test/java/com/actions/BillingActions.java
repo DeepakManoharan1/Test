@@ -63,9 +63,9 @@ public class BillingActions {
 		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
 		bill.OPDLevelCheck.click();
 		bill.charge.click();
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
 		//repeat
-		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeCatogory));
+//		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeCatogory));
 		bill.chargeCatogory.click();
 //		Thread.sleep(5000);
 		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.OPDLevelCheck));
@@ -76,7 +76,7 @@ public class BillingActions {
 		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bill.chargeDropDown));
 		bill.chargeDropDown.click();
 		bill.appliedCharges.sendKeys("150");
-		bill.PaidCharges.sendKeys("150");
+		//bill.PaidCharges.sendKeys("150");
 		bill.SaveAndPrint.click();
 		
 	}

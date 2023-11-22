@@ -38,7 +38,7 @@ public class BillingLocators {
 	public WebElement doctor;
 	@FindBy(xpath = "(//small[@class='req']/following-sibling::input)[3]")
 	public WebElement appliedCharges;
-	@FindBy(xpath = "(//label[text()='Paid Amount (₹)']/following::input)[1]")
+	@FindBy(xpath = "//label[text()='Paid Amount (₹)']/following-sibling::input")
 	public WebElement PaidCharges;
 	@FindBy(xpath = "(//span[@class='select2-selection__rendered'])[3]")
 	public WebElement chargeCatogory;
