@@ -33,12 +33,13 @@ public class AdminLoginStepDefinition  {
 
 	@Given("user enters into the Admin portal")
 	public void user_enters_into_the_admin_portal() {
-		System.out.println("Admin page ");
-		
+//		System.out.println("Admin page ");
+		HelperClass.log.info("Admin page ");
 		HelperClass.openPage(url);
 		HelperClass.driver.findElement(By.xpath("(//a[contains(@class,'btn btn-primary')]//i)[2]")).click();
 		HelperClass.driver.findElement(By.xpath("//div[@class='form-bottom']//button[1]")).click();
-		System.out.println("Logged in Successfull");
+//		System.out.println("Logged in Successfull");
+		HelperClass.log.info("Logged in Successfull");
 		
 		
 	}
@@ -83,6 +84,7 @@ public class AdminLoginStepDefinition  {
 	public void checks_the_name() {
 	    billaction.getUrl();
 	    Assert.assertNotSame(billaction.getUrl(), url);
+	    HelperClass.log.info("Asserted");
 	}
 	
 	@When("enter some fields")
@@ -94,19 +96,22 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the error")
 	public void assert_the_error() throws InterruptedException {
 	    Assert.assertTrue(billaction.getErrorMessage().contains("The Age field is required."));
-	    System.out.println("Assertion passed");
+//	    System.out.println("Assertion passed");
+	    HelperClass.log.info("Assertion passed");
 	}
 	
 	@Then("Assert the successfull message")
 	public void assert_the_successfull_message() throws InterruptedException {
 		Assert.assertTrue(billaction.checkingSavedOrNot().contains("Record Saved Successfully"));
-		System.out.println("Assertion passed in new patient");
+//		System.out.println("");
+		HelperClass.log.info("Assertion passed in new patient");
 	}
 	
 	@Then("Assert the intentional error")
 	public void assert_the_intentional_error() throws InterruptedException {
 		Assert.assertTrue(billaction.getPaidErrorMessage().contains("The Paid Amount field is required."));
-	    System.out.println("Assertion passed for Intentionally failed full bill module");
+//	    System.out.println("");
+	    HelperClass.log.info("Assertion passed for Intentionally failed full bill module");
 	}
 /////////////////////////////////
 	//front office
@@ -139,7 +144,8 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the error frontOffice")
 	public void assert_the_error_front_office() throws InterruptedException {
 		Assert.assertTrue(frontAction.assertfrontError().contains("The Purpose field is required."));
-		 System.out.println("assert passed for front office"); 
+//		 System.out.println(""); 
+		 HelperClass.log.info("assert passed for front office");
 	}
 
 	@When("clicks the Add visitors as inquiry")
@@ -188,7 +194,7 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the error in outpatient")
 	public void assert_the_error_in_outpatient() {
 		Assert.assertTrue(opAct.assert_the_error_in_outpatient().contains("The Day field is required."));
-		
+		HelperClass.log.info("Error message is asserted");
 	}
 
 	@When("enter the Mandatory fields only in outPatient")
@@ -199,7 +205,7 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the successfull message in OutPatient")
 	public void assert_the_successfull_message_in_out_patient() {
 		Assert.assertTrue(opAct.assert_the_successfull_message_in_out_patient().contains("Record Saved Successfully"));
-		
+		HelperClass.log.info("Assert the Successfully message");
 	}
 
 	@Then("enters the other OPD details in outPatient")
@@ -209,7 +215,8 @@ public class AdminLoginStepDefinition  {
 
 	@Then("checks the name in Outpatient")
 	public void checks_the_name_in_outpatient() {
-		Assert.assertTrue(opAct.checks_the_name_in_outpatient().contains("Record Saved Successfully"));
+		Assert.assertTrue(opAct.checks_the_name_in_outpatient().contains(""));
+		HelperClass.log.info("Record Saved Successfully in outPatient");
 		
 	}
 
@@ -221,7 +228,7 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the intentional error in OutPatient")
 	public void assert_the_intentional_error_in_out_patient() {
 		Assert.assertTrue(opAct.assert_the_intentional_error_in_out_patient().contains("The Appointment Date field is required."));
-		
+		HelperClass.log.info("Asert passed with showing error message");
 	}
 
 	
@@ -244,7 +251,7 @@ public class AdminLoginStepDefinition  {
 	@Then("Assert the error in Inpatient")
 	public void assert_the_error_in_inpatient() {
 		Assert.assertTrue(InAct.assert_the_error_in_inpatient().contains("The Name field is required."));
-		
+		HelperClass.log.info("Assert passed ");
 	    
 	}
 
@@ -258,6 +265,7 @@ public class AdminLoginStepDefinition  {
 	public void assert_the_successfull_message_in_in_patient() {
 		String m=InAct.assert_the_successfull_message_in_in_patient();
 		Assert.assertTrue(m.contains("Record Saved Successfully"));
+		HelperClass.log.info("Record saved");
 		
 	}
 

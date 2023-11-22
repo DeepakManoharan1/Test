@@ -1,0 +1,4 @@
+[INFO ] 2023-11-22 06:57:06.615 [main] AdminLoginStepDefinition - Implicit wait applied
+[INFO ] 2023-11-22 06:57:06.854 [main] AdminLoginStepDefinition - Admin page 
+[INFO ] 2023-11-22 06:57:17.389 [main] AdminLoginStepDefinition - Logged in Successfull
+[INFO ] 2023-11-22 06:57:25.342 [main] AdminLoginStepDefinition - Assertion passed in new patient

@@ -2,21 +2,27 @@ package com.utility;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.stepdefinition.AdminLoginStepDefinition;
+
 public class HelperClass {
 private static HelperClass helperclass;
-	
+    public static Logger log; 
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public final static int TIMEOUT = 10;
 	
 	protected HelperClass(){
+		log = LogManager.getLogger(AdminLoginStepDefinition.class);
 		driver = new EdgeDriver();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+		log.info("Implicit wait applied");
 		driver.manage().window().maximize();
 	}
 	
