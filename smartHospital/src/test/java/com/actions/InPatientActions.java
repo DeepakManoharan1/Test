@@ -60,6 +60,7 @@ public class InPatientActions {
 	}
 	
 	public String checks_the_name_in_inpatient() {
+		HelperClass.wait.until(ExpectedConditions.elementToBeClickable(inPat.sucessmsg2));
 		return inPat.sucessmsg2.getText();
 	}
 	

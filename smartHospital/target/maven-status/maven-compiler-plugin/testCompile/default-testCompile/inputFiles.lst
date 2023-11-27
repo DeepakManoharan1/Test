@@ -3,10 +3,10 @@ C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\actions\LoginActions.jav
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\locators\BillingLocators.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\stepdefinition\AdminLoginStepDefinition.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\stepdefinition\LoginStepDefinition.java
-C:\MainPilotDeepak\Test\smartHospital\src\test\java\runner\Runner.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\actions\OutPatientActions.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\locators\InPatientLocators.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\utility\HelperClass.java
+C:\MainPilotDeepak\Test\smartHospital\src\test\java\runner\TestRunner.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\locators\LoginLocators.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\actions\BillingActions.java
 C:\MainPilotDeepak\Test\smartHospital\src\test\java\com\locators\OutPatientLocators.java

@@ -1,187 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="15" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-22T13:08:57 IST" name="Default suite" finished-at="2023-11-22T13:17:00 IST" duration-ms="482661">
+  <suite started-at="2023-11-23T14:31:34 IST" name="Default suite" finished-at="2023-11-23T14:32:30 IST" duration-ms="55502">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@66982506]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-11-22T13:08:57 IST" name="Default test" finished-at="2023-11-22T13:17:00 IST" duration-ms="482661">
-      <class name="runner.Runner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:08:57 IST" name="setUpClass" finished-at="2023-11-22T13:08:58 IST" duration-ms="795" status="PASS">
+    <test started-at="2023-11-23T14:31:34 IST" name="Default test" finished-at="2023-11-23T14:32:30 IST" duration-ms="55502">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@66982506]" started-at="2023-11-23T14:31:34 IST" name="setUpClass" finished-at="2023-11-23T14:31:35 IST" duration-ms="963" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@54aacbc7]]>
+                <![CDATA[org.testng.TestRunner@4040ccae]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:08:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:09:43 IST" duration-ms="44606" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Missing the mandatory fields intentionally in new patient"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the billing Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:09:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:10:10 IST" duration-ms="26838" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["checking the new patient"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the billing Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:10:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:10:36 IST" duration-ms="26671" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Checking the mandatory fields for the new patient details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the billing Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:10:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:11:03 IST" duration-ms="26749" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Intentionally failing in billig module"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the billing Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:11:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:11:32 IST" duration-ms="29114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Enter all fields in front office as visitor and save"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Front office Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:11:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:11:53 IST" duration-ms="20543" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Missing the mandatory fields intentionally in new patient for front office"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Front office Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:11:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:12:13 IST" duration-ms="20465" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Enter all fields in front office as inquiry and save"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Front office Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:12:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:12:38 IST" duration-ms="24816" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Enter all fields in front office as  seminar and save"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Front office Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:12:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:12:54 IST" duration-ms="15749" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Missing the mandatory fields intentionally in new patient for OutPatient office"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Inpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:12:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:13:13 IST" duration-ms="18913" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["checking the new patient at out patient"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Inpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:13:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:13:42 IST" duration-ms="29483" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@66982506]" started-at="2023-11-23T14:31:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-23T14:32:04 IST" duration-ms="29130" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -208,55 +48,7 @@ at ✽.checks the name in Inpatient(file:///C:/MainPilotDeepak/Test/smartHospita
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:13:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:14:33 IST" duration-ms="50585" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Intentionally failing in InPatient module"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Inpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:14:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:15:15 IST" duration-ms="42761" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Missing the mandatory fields intentionally in new patient for OutPatient office"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Outpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:15:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:15:53 IST" duration-ms="37261" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["checking the new patient at out patient"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Outpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:15:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:16:17 IST" duration-ms="24203" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@66982506]" started-at="2023-11-23T14:32:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-23T14:32:24 IST" duration-ms="19653" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -272,27 +64,11 @@ at ✽.checks the name in Inpatient(file:///C:/MainPilotDeepak/Test/smartHospita
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:16:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-22T13:16:41 IST" duration-ms="23971" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Intentionally failing in OutPatient module"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Checking the Outpatient Module"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Runner@1a75e76a]" started-at="2023-11-22T13:16:41 IST" name="tearDownClass" finished-at="2023-11-22T13:17:00 IST" duration-ms="19062" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@66982506]" started-at="2023-11-23T14:32:24 IST" name="tearDownClass" finished-at="2023-11-23T14:32:30 IST" duration-ms="5696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.Runner -->
+      </class> <!-- runner.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

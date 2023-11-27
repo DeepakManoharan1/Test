@@ -1,6 +1,5 @@
 com\actions\FrontOfficeAction.class
 com\stepdefinition\LoginStepDefinition.class
-runner\Runner.class
 com\actions\InPatientActions.class
 com\locators\OutPatientLocators.class
 com\locators\InPatientLocators.class
@@ -13,3 +12,4 @@ com\locators\LoginLocators.class
 com\stepdefinition\HookClass.class
 com\actions\OutPatientActions.class
 com\stepdefinition\AdminLoginStepDefinition.class
+runner\TestRunner.class
